@@ -1,0 +1,54 @@
+@import "./../App/vars";
+@import "./../App/mixins";
+
+.count {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.count__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  &--cart {
+    margin-right: 10px;
+  }
+}
+.count__legend {
+  margin-right: 22px;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: $secondaryFont;
+  color: $blueColor;
+  &--cart {
+    font-size: 32px;
+  }
+}
+
+.count__input {
+  font-family: $primaryFont;
+  max-width: 100%;
+  padding-top: 4px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.3;
+  color: $blueColor;
+  width: 130px;
+  height: 80px;
+  background: $whiteColor;
+  border-radius: 16px;
+  border: 2px solid $blueColor;
+}
+
+.count__controls {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.count__controls img {
+  display: block;
+}

@@ -1,0 +1,21 @@
+@import "./../App/vars.scss";
+@import "./../App/mixins.scss";
+
+.hero {
+  padding: 247px 0;
+
+  &__content {
+    max-width: 530px;
+
+    .button {
+      margin-top: 15px;
+      padding: 28px 78px 28px 46px;
+      background-color: $yellowColor;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover,
+      &:focus {
+        background-color: $blueColor;
+      }
+    }
+  }
+}

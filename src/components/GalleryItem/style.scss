@@ -1,0 +1,74 @@
+@import "./../App/vars";
+@import "./../App/mixins";
+
+.gallery-item {
+  $topGap: 30px;
+  $sideGap: 7%;
+  position: relative;
+  padding: $topGap 0 17px;
+  border-radius: 24px;
+  background-blend-mode: multiply;
+  background-color: $imgBkgdGreyColor;
+
+  &__div {
+    padding: 0 $sideGap;
+  }
+  &__category {
+    position: absolute;
+    background-color: $blueColor;
+    color: $whiteColor;
+    font-size: 0.9375rem;
+    font-family: $primaryFont;
+    font-weight: 600;
+    line-height: 1.32;
+    padding: 10px 10px;
+    border-radius: 10px;
+    top: $topGap;
+    left: $sideGap;
+  }
+
+  &__image {
+    width: 335px;
+    height: 325px;
+  }
+
+  &__name {
+    font-family: $secondaryFont;
+    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $blueColor;
+    margin-bottom: 6px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid $lineGreyColor;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-wrapper {
+    display: flex;
+    align-items: center;
+    font-family: $primaryFont;
+    font-weight: 700;
+  }
+
+  &__old-price {
+    font-size: 0.9375rem;
+    color: $priceGreyColor;
+    text-decoration: line-through;
+    margin-right: 8px;
+  }
+
+  &__new-price {
+    font-size: 1.125rem;
+    color: $blueColor;
+  }
+
+  &__stars-wrapper {
+    display: flex;
+  }
+}

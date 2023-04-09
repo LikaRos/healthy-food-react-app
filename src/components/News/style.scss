@@ -1,0 +1,175 @@
+@import "./../App/vars";
+@import "./../App/mixins";
+
+.news-section {
+  padding: 177px 0 117px;
+
+  &__header {
+    display: flex;
+    margin-bottom: 48px;
+
+    & > div {
+      width: 50%;
+
+      &:last-child {
+        align-self: end;
+
+        .button {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: $lgBreakpoint) {
+  .news-section {
+    &__header {
+      flex-direction: column;
+
+      & > div {
+        width: 100%;
+
+        &:last-child {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    &__content {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+.news {
+  position: relative;
+  width: calc(50% - 23px);
+  border-radius: 30px;
+
+  &__date {
+    position: absolute;
+    top: 43px;
+    left: 32px;
+    width: 82px;
+    height: 82px;
+    border-radius: 100%;
+    background-color: $whiteColor;
+
+    & > div {
+      position: absolute;
+      @include alignAbsolutePosition;
+      @include h5Font;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    position: relative;
+    top: -30%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 45px 45px 60px;
+    border-radius: 30px;
+    background-color: $whiteColor;
+    box-shadow: 0 20px 35px 0 rgba(167, 167, 167, 0.75);
+  }
+
+  &__author {
+    margin-bottom: 15px;
+    color: $blueColor;
+    font-size: 1.125rem;
+
+    img {
+      display: inline-block;
+      margin-right: 8px;
+    }
+  }
+
+  .button {
+    margin-top: 15px;
+    padding: 28px 78px 28px 46px;
+  }
+}
+
+@media (max-width: $xlBreakpoint) {
+  .news__content {
+    top: -10%;
+  }
+}
+
+@media (max-width: $lgBreakpoint) {
+  .news {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 50px;
+
+    &__content {
+      position: static;
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 30px;
+
+  h2 {
+    color: $whiteColor;
+    width: calc(100% / 3);
+  }
+
+  &__input-wrapper {
+    display: flex;
+    max-height: 80px;
+
+    input {
+      width: 350px;
+      margin-right: 6px;
+      padding: 23px 30px;
+      border-radius: 16px;
+    }
+
+    .button {
+      border-radius: 16px;
+      padding: 28px 78px 28px 46px;
+    }
+  }
+}
+
+@media (max-width: $xxlBreakpoint) {
+  .subscribe-form {
+    padding: 50px;
+    flex-direction: column;
+
+    h2 {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: $mdBreakpoint) {
+  .subscribe-form {
+    align-items: center;
+
+    &__input-wrapper {
+      flex-direction: column;
+      max-width: 350px;
+      max-height: none;
+
+      input {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

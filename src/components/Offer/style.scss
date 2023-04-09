@@ -1,0 +1,58 @@
+@import "./../App/vars.scss";
+@import "./../App/mixins.scss";
+
+.offers-section {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 158px 0;
+}
+.offer {
+  position: relative;
+  margin-right: 2.25rem;
+  border-radius: 10px;
+
+  &__content {
+    position: absolute;
+    left: 54px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 278px;
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  &.offer-light {
+    .offer__content {
+      color: $whiteColor;
+    }
+
+    .accent {
+      color: $whiteColor;
+    }
+  }
+
+  &.offer-dark {
+    .offer__content {
+      color: $blueColor;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $lgBreakpoint) {
+  .offer {
+    margin-bottom: 2.25rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $lgBreakpoint) {
+  .offers-section {
+    padding: 158px 0 50px;
+    flex-direction: column;
+    align-items: center;
+  }
+}

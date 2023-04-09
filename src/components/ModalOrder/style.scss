@@ -1,0 +1,102 @@
+@import "./../App/vars";
+@import "./../App/mixins";
+
+.modal-order {
+  background-color: $modalBkgdColor;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50px;
+  position: relative;
+
+  &__container {
+    padding: 30px 0px;
+    position: relative;
+    margin: 0 5%;
+  }
+  .button {
+    margin-top: 35px;
+    margin-left: 20px;
+    margin-right: 0;
+  }
+  &__shortDescription {
+    margin-bottom: 35px;
+  }
+  &__countWrapper {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    &--cart {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin-top: 0;
+      margin-bottom: 115px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+    justify-content: center;
+  }
+
+  &__textWrapper {
+    width: 658px;
+    padding-top: 100px;
+    text-align: justify;
+  }
+
+  &__buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__description {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: $primaryFont;
+    font-weight: 600;
+    font-size: 18px;
+    color: $textBlueColor;
+    text-align: left;
+    text-align: center;
+  }
+
+  &__image {
+    display: block;
+    width: 590px;
+    height: 480px;
+    border-radius: 24px;
+    // height: 371px;
+  }
+
+  .gallery-item {
+    width: 590px;
+    height: 480px;
+    margin-right: 40px;
+    padding: 0;
+  }
+  .gallery-item__name {
+    padding: 0;
+    text-align: left;
+    font-size: 40px;
+    border: none;
+  }
+  .gallery-item__category {
+    top: 38px;
+    left: 35px;
+  }
+  .gallery-item__price-wrapper {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+}

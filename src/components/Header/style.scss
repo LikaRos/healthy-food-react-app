@@ -1,0 +1,201 @@
+@import "./../App/vars.scss";
+@import "./../App/mixins.scss";
+
+.header {
+  $iconSize: 56px;
+
+  display: flex;
+  align-items: center;
+  margin: 0 8.5%;
+  padding: 69px 0;
+  color: $blueColor;
+
+  &__wrapper {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__big-menu {
+    a {
+      @include menuFont;
+      margin-right: 25px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__navLink {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+
+    .header__search {
+      position: relative;
+      margin-right: 10px;
+
+      input {
+        height: $iconSize;
+        border: none;
+        background-color: $lightGrayColor;
+        border-radius: $iconSize;
+      }
+
+      img {
+        position: absolute;
+        height: $iconSize;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &__cart {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: $iconSize;
+    border: 1px solid $lightGrayBorderColor;
+    border-radius: $iconSize;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: $iconSize;
+    }
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-left: $iconSize + 10;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: $xxlBreakpoint) {
+  .header {
+    margin: 0 4%;
+
+    &__big-menu {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $mdBreakpoint) {
+  .header__search {
+    display: none;
+  }
+}
+
+@media (max-width: $smBreakpoint) {
+  .header {
+    margin: 0 7px;
+  }
+}
+
+#burgerMenuToggle {
+  display: none;
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 10px;
+
+  a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+  }
+
+  input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+
+  span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+
+    &:first-child {
+      transform-origin: 0 0;
+    }
+
+    &:nth-last-child(2) {
+      transform-origin: 0 100%;
+    }
+  }
+
+  input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  input:checked ~ ul {
+    transform: none;
+  }
+}
+
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: 0 0 0 -50px;
+  padding: 50px 50px 30px;
+  background: #ededed;
+  list-style-type: none;
+  transform-origin: 0 0;
+  transform: translate(-300%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+  a {
+    display: block;
+  }
+
+  li {
+    padding: 10px 0;
+    @include menuFont;
+  }
+}
+
+@media (max-width: $xxlBreakpoint) {
+  #burgerMenuToggle {
+    display: block;
+  }
+}

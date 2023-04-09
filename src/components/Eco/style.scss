@@ -1,0 +1,46 @@
+@import "./../App/vars";
+@import "./../App/mixins";
+
+.eco-section {
+  padding: 100px 0;
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__content {
+    max-width: 790px;
+    padding: 80px 90px;
+    background-color: $whiteColor;
+    border-radius: 25px;
+  }
+
+  &__list {
+    margin-top: 35px;
+
+    li {
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h5 {
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: $lgBreakpoint) {
+  .eco-section {
+    background-size: cover;
+  }
+}
+
+@media (max-width: $smBreakpoint) {
+  .eco-section__content {
+    padding: 80px 30px;
+  }
+}

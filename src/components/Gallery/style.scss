@@ -1,0 +1,17 @@
+@import "./../App/vars";
+@import "./../App/mixins";
+
+.categories {
+  padding: 167px 0 160px;
+  text-align: center;
+}
+@media (max-width: $lgBreakpoint) {
+  .categories {
+    padding-bottom: 150px;
+  }
+}
+@media (max-width: $xxlBreakpoint) {
+  .categories {
+    padding-bottom: 300px;
+  }
+}

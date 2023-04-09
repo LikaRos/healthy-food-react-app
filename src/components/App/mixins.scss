@@ -1,0 +1,36 @@
+@mixin h2Font {
+  font-weight: 800;
+  color: $blueColor;
+  font-size: 3.125rem;
+  line-height: 1.1;
+}
+
+@mixin h5Font {
+  font-weight: 800;
+  font-size: 1.5625rem;
+  color: $blueColor;
+  margin: 0 0 7px;
+}
+
+@mixin smallFont {
+  font-family: $primaryFont;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: $textBlueColor;
+}
+
+@mixin menuFont {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $blueColor;
+
+  &:hover {
+    color: $textBlueColor;
+  }
+}
+
+@mixin alignAbsolutePosition {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

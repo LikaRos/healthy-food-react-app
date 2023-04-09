@@ -1,0 +1,89 @@
+@import "./../App/vars";
+@import "./../App/mixins";
+
+.button {
+  display: block;
+  font-family: $secondaryFont;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.17;
+  color: $whiteColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $blueColor;
+  border-radius: 16px;
+  border: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    background-color: $yellowColor;
+  }
+  &__cart {
+    margin-top: 122px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 28px 60px;
+  }
+
+  &__product {
+    margin-top: 122px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 28px 78px 28px 46px;
+  }
+
+  &--description {
+    font-family: $primaryFont;
+    font-size: 25px;
+    padding: 23px 60px;
+    margin: 0;
+    margin-top: 95px;
+    margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &--form {
+    padding: 28px 47px 29px 47px;
+  }
+
+  &-inverse {
+    color: $blueColor;
+    background-color: $yellowColor;
+    &:hover {
+      color: $yellowColor;
+      background-color: $blueColor;
+    }
+  }
+
+  &-white {
+    color: $blueColor;
+    background-color: $whiteColor;
+    border: 2px solid $blueColor;
+    padding: 28px 78px 28px 46px;
+  }
+}
+
+.button__iconWrapper {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background-color: $blueIconColor;
+  margin-left: 10px;
+}
+.button__svg {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: block;
+  width: 13px;
+  height: 13px;
+  fill: #fff;
+  &--close {
+    top: 0px;
+    left: 0px;
+    fill: #fff;
+  }
+}

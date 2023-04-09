@@ -1,0 +1,12 @@
+@import "./../App/vars";
+@import "./../App/mixins";
+
+.products-section {
+  padding: 200px 0;
+  background-color: $blueColor;
+
+  h2 {
+    color: $whiteColor;
+    margin-bottom: 50px;
+  }
+}

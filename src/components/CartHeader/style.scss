@@ -1,0 +1,11 @@
+@import "./../App/vars";
+@import "./../App/mixins";
+
+.cart-header {
+  margin: 0 0 140px;
+
+  h1 {
+    text-align: center;
+    padding: 184px 0;
+  }
+}

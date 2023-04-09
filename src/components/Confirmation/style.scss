@@ -1,0 +1,15 @@
+@import "./../App/vars";
+@import "./../App/mixins";
+
+.thank-you-header {
+  margin: 94px 0 270px;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 44px;
+  }
+
+  &__bg-wrapper {
+    height: 450px;
+  }
+}

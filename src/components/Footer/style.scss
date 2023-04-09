@@ -1,0 +1,151 @@
+@import "./../App/vars";
+@import "./../App/mixins";
+
+.footer {
+  display: flex;
+  padding: 30px 0 16px;
+  align-content: stretch;
+
+  address {
+    font-style: normal;
+  }
+
+  &__left {
+    flex-basis: 25%;
+    text-align: right;
+
+    & > div {
+      margin-top: 32px;
+    }
+  }
+
+  &__right {
+    flex-basis: 25%;
+    text-align: left;
+
+    ul {
+      margin-top: 32px;
+    }
+
+    small {
+      line-height: 2.73;
+
+      a {
+        color: $textBlueColor;
+      }
+    }
+  }
+
+  &__center {
+    flex-basis: 50%;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-left: 1px solid $footerBorderColor;
+    border-right: 1px solid $footerBorderColor;
+
+    .logo {
+      margin-bottom: 23px;
+      justify-content: center;
+    }
+
+    .links {
+      margin-top: 50px;
+    }
+  }
+
+  &__content {
+    text-align: center;
+  }
+}
+
+@media (max-width: $lgBreakpoint) {
+  .footer {
+    flex-wrap: wrap;
+
+    &__left {
+      flex-basis: 50%;
+      padding-right: 30px;
+      border-right: 1px solid $footerBorderColor;
+
+      & > div {
+        margin-top: 0;
+      }
+    }
+
+    &__right {
+      padding-left: 30px;
+      flex-basis: 50%;
+
+      ul {
+        margin-top: 7px;
+      }
+
+      small {
+        line-height: 1.75;
+      }
+    }
+
+    &__center {
+      flex-basis: 100%;
+      order: 2;
+      margin: 0;
+      padding: 0;
+      border: none;
+
+      .logo {
+        display: none;
+      }
+
+      .footer__content {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $smBreakpoint) {
+  .footer {
+    flex-wrap: wrap;
+
+    &__left {
+      flex-basis: 100%;
+      order: 1;
+      padding: 0;
+      border: none;
+      text-align: center;
+
+      h4 {
+        display: none;
+      }
+    }
+
+    &__right {
+      flex-basis: 100%;
+      padding: 0;
+
+      h4 {
+        display: none;
+      }
+
+      ul {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        text-align: center;
+      }
+
+      small {
+        line-height: 1.75;
+      }
+    }
+
+    &__center {
+      .links {
+        margin-top: 10px;
+      }
+    }
+  }
+}

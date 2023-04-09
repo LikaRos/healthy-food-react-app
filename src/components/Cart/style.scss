@@ -1,0 +1,164 @@
+@import "./../App/vars";
+@import "./../App/mixins";
+
+.cart {
+  background-color: rgba(253, 176, 45, 0.3);
+  .container {
+    padding-bottom: 60px;
+  }
+
+  &__image {
+    width: 292px;
+    height: 226px;
+    display: block;
+    border-radius: 24px;
+    opacity: 0.6;
+  }
+
+  &-productImage {
+    margin-top: 30px;
+    background-color: rgba(253, 176, 45, 0.4);
+    width: 292px;
+    height: 226px;
+    border-radius: 24px;
+  }
+
+  &-envelop {
+    align-items: center;
+    margin-bottom: 35px;
+    font-family: $secondaryFont;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $blueColor;
+  }
+  .gallery__name {
+    font-weight: 700px;
+  }
+  &__cost-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    max-width: 360px;
+    margin-left: auto;
+    margin-top: 10px;
+    font-family: $secondaryFont;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $blueColor;
+  }
+  .button__close {
+    position: static;
+  }
+  &-flex__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .cart-productImage {
+    flex-basis: 292px;
+  }
+  .gallery__name {
+    padding-left: 10px;
+    flex-basis: 24%;
+  }
+
+  .gallery_prices {
+    display: flex;
+    align-items: center;
+  }
+
+  .gallery__oldPrice {
+    margin-right: 10px;
+  }
+
+  .count__box {
+    flex-basis: 30%;
+  }
+
+  .count__box-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .button__close--cart {
+    position: static;
+  }
+  .active {
+    display: none;
+  }
+
+  .button {
+    flex-basis: 64px;
+    margin-left: auto;
+  }
+  .button:disabled {
+    background-color: $priceGreyColor;
+    cursor: help;
+    &:hover {
+      background-color: $priceGreyColor;
+    }
+  }
+
+  .count__legend {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: $xlBreakpoint) {
+  .cart {
+    &-flex__item {
+      flex-wrap: wrap;
+    }
+
+    .gallery__name {
+      flex-basis: calc(100% - 430px);
+    }
+
+    .gallery_prices {
+      flex-basis: 130px;
+    }
+  }
+}
+
+@media (max-width: $mdBreakpoint) {
+  .cart {
+    &-envelop {
+      font-size: 1.5rem;
+    }
+
+    &__cost-wrapper {
+      font-size: 1.5rem;
+    }
+
+    .count__legend {
+      font-size: 1.5rem;
+    }
+
+    .count__input {
+      height: 53px;
+    }
+
+    .gallery__name {
+      flex-basis: calc(100% - 292px);
+    }
+  }
+}
+
+@media (max-width: $smBreakpoint) {
+  .cart {
+    &-flex__item {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+
+    .cart-productImage {
+      flex-basis: auto;
+    }
+
+    .button {
+      margin: 10px 0 0;
+      flex-basis: auto;
+    }
+  }
+}
